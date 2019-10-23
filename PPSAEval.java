@@ -64,13 +64,13 @@ public class PPSAEval {
 		    }
 
 		    int a = 500; //alfa: Anonymizing the final result value.
-		    System.out.println("kappa: " + kappa);
-			System.out.println("N:|IoT| " + N);
-			System.out.println("k=|U|=|Vi|: " + vSize);
-		    System.out.println("U: " + U);
-		    System.out.println("t: " + t);
-			System.out.println("a: " + a);
-	    	System.out.println("=========================================================================");
+		    ////System.out.println("kappa: " + kappa);
+		    ////System.out.println("N:|IoT| " + N);
+  		    ////System.out.println("k=|U|=|Vi|: " + vSize);
+		    ////System.out.println("U: " + U);
+		    ////System.out.println("t: " + t);
+		    ////System.out.println("a: " + a);
+		    ////System.out.println("=========================================================================");
 
 			
 
@@ -113,7 +113,7 @@ public class PPSAEval {
 	    	endTime=System.currentTimeMillis();
 	    	elapsedTime = endTime-startTime;
 	    	t1 = elapsedTime;
-	    	System.out.println("Preparing E(U), E(T) and E(a) (ns): "+t1);
+	    	////System.out.println("Preparing E(U), E(T) and E(a) (ns): "+t1);
 
 	    	////System.out.println("=========================================================================");
 	    	//System.exit(0);
@@ -167,7 +167,7 @@ public class PPSAEval {
 	    	endTime=System.currentTimeMillis();
 	    	elapsedTime = endTime-startTime;
 	    	t3 = elapsedTime;
-	    	System.out.println("IoT Response (ns) :"+t3+"/"+N+": "+t3/N);
+	    	////System.out.println("IoT Response (ns) :"+t3+"/"+N+": "+t3/N);
 	    	
 		
 
@@ -202,7 +202,7 @@ public class PPSAEval {
 			endTime = System.currentTimeMillis();
 	    	elapsedTime = endTime-startTime;
  		    t4 = elapsedTime;
-	    	System.out.println("FN2: Step4 (ns)  :"+t4);
+ 		    ////System.out.println("FN2: Step4 (ns)  :"+t4);
 
 	    	
 			/*
@@ -236,7 +236,7 @@ public class PPSAEval {
 			endTime = System.currentTimeMillis();
 	    	elapsedTime = endTime-startTime;
 		    t5 = elapsedTime;
-	    	System.out.println("FN1: Step5 (ns) :"+t5);
+		    ////System.out.println("FN1: Step5 (ns) :"+t5);
 			
 		    /*
 			for(int i=0; i<N ; i++) {
@@ -265,7 +265,7 @@ public class PPSAEval {
 			endTime = System.currentTimeMillis();
 	    	elapsedTime = endTime-startTime;
 		    t6 = elapsedTime;
-	    	System.out.println("FN2: Step6 (ns)  :"+t6);
+		    ////System.out.println("FN2: Step6 (ns)  :"+t6);
 	    	
 	    	////System.out.println("=========================================================================");
 	    	//System.exit(0);
@@ -273,10 +273,10 @@ public class PPSAEval {
 	    	
 			//==================== User: 7. result-a --> finalresult ====================
 			try {
-				System.out.println(Paillier.decrypt(result, pubkey, prikey).subtract(BigInteger.valueOf(a)));
+				////System.out.println(Paillier.decrypt(result, pubkey, prikey).subtract(BigInteger.valueOf(a)));
 				} catch (Exception e) {e.printStackTrace();}
 			
-			System.out.println("=========================================================================");
+			////System.out.println("=========================================================================");
 		
 		   
 			System.out.println(kappa+"\t"+N+"\t"+vSize+"\t"+t1+"\t"+t3+"\t"+t3/N+"\t"+t4+"\t"+t5+"\t"+t6);
